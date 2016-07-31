@@ -4,5 +4,5 @@ import TasklistFragment 	from "./tasklistFragment";
 
 ReactDOM.render(
 	<TasklistFragment />,
-	document.body
+	document.getElementById("mount-point")
 );
