@@ -81,3 +81,9 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
