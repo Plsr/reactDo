@@ -1,25 +1,25 @@
 import React from "react";
-import TaskList from "./taskList";
+import ProjectsList from "./projectsList";
 
 export default React.createClass({
   getInitialState: function() {
     return {
-      tasks: []
+      projects: []
     }
   },
-  addTask: function(event) {
+  addProject: function(event) {
     // Remove synthetic event from the pool
     // See https://facebook.github.io/react/docs/events.html#event-pooling
     event.persist();
 
-    var updatedTasks = this.state.tasks;
+    var updatedProjects = this.state.projects;
     var inputField = event.target.getElementsByTagName('input')[0];
 
     // Check if string is emtpy or only whitespace
     if (inputField.value.replace(/\s/g, '').length) {
-      updatedTasks.push(inputField.value)
+      updatedProjects.push(inputField.value)
       this.setState({
-        tasks: updatedTasks
+        projects: updatedProjects
       });
     }
 
@@ -29,13 +29,13 @@ export default React.createClass({
   },
   render: function() {
     return (
-      <div className="tasklist-component" >
-        <form name="add-task" onSubmit={this.addTask} action="#">
-          <input type="text" placeholder="Add a task" />
+      <div className="projectslist-component" >
+        <form name="add-project" onSubmit={this.addProject} action="#">
+          <input type="text" placeholder="Add a project" />
           <button type="submit">Add</button>
-          <TaskList tasks={this.state.tasks}/>
+          <ProjectsList projects={this.state.projects}/>
         </form>
       </div>
     )
   }
-});
+})

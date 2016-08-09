@@ -1,16 +1,16 @@
-import React 							from "react";
-import ReactDOM 					from "react-dom";
-import TasklistFragment 	from "./tasklistComponent";
-import ProjectsList 			from "./projectsList";
+import React                  from "react";
+import ReactDOM               from "react-dom";
+import TasklistComponent       from "./tasklistComponent";
+import ProjectsListComponent  from "./projectslistComponent";
 
 // Render Taks List
 ReactDOM.render(
-	<TasklistFragment />,
+	<TasklistComponent />,
 	document.getElementById("task-mount")
 );
 
 // Render Project List
 ReactDOM.render(
-	<ProjectsList />,
+	<ProjectsListComponent />,
 	document.getElementById("project-mount")
 );
