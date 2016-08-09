@@ -8,7 +8,6 @@ export default React.createClass({
   },
   render: function() {
     return (
-      console.log("test"),
       <li key={this.props.name}>{this.props.name}</li>
     )
   }
