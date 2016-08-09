@@ -1,4 +1,5 @@
 import React from "react";
+import SingleProject from "./singleProject";
 
 export default React.createClass({
 	getInitialState: function() {
@@ -12,9 +13,9 @@ export default React.createClass({
 				{
 					console.log(this.state.projects),
 					this.state.projects.map(function(project) {
-						return <li>{project}</li>
+						return <SingleProject key={project} name={project} />
 					})
-				}	
+				}
 			</ul>
 		)
 	}
