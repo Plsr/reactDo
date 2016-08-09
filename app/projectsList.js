@@ -11,7 +11,6 @@ export default React.createClass({
 		return (
 			<ul>
 				{
-					console.log(this.state.projects),
 					this.state.projects.map(function(project) {
 						return <SingleProject key={project} name={project} />
 					})
